@@ -24,12 +24,12 @@ app.get('/courses/:id',(req,res)=>{
     res.send(courses)
 })
 
-// app.get('/courseinfo/:id',(req,res)=>{
-//     const id=req.params.id;
-//    const selectCourse=courseInfo.find(course=>course._id===id)
-//    res.send(selectCourse)
+app.get('/checkout/:id',(req,res)=>{
+    const id=req.params.id;
+   const selectCourse=courseInfo.filter(course=>course._id===id)
+   res.send(selectCourse)
    
-// })
+})
 app.listen(port,()=>{
     console.log('couses info',port)
 })
